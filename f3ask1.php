@@ -1,44 +1,47 @@
 <html>
-<?php $page_title = "Φυλλάδιο 3 - Άσκηση 1";
-include("header.php"); ?>
+<?php
+$page_title = "Φυλλάδιο 3 - Άσκηση 1";
+include("header.php");
+?>
 
 <body>
-    <header>
-        <div class="header">
-            <p><?php echo $page_title; ?></p>
-        </div>
-    </header>
-    <main>
-        <form method="POST">
-            <p class="input_group">
-                <label for="name">Σχολείο:</label>
-                <input type="text" name="school" required />
-            </p>
-            <br>
-            <p class="input_group">
-                <label for="email">Email: </label><input type="email" name="email" required />
-            </p>
-            <p><input type="submit" value="Submit" /></p>
-        </form>
+    <section>
+        <header>
+            <div class="header">
+                <p><?php echo $page_title; ?></p>
+            </div>
+        </header>
+        <main>
+            <form method="POST">
+                <p class="input_group">
+                    <label for="name">Σχολείο:</label>
+                    <input type="text" name="school" required />
+                </p>
+                <br>
+                <p class="input_group">
+                    <label for="email">Email: </label><input type="email" name="email" required />
+                </p>
+                <p><input type="submit" value="Submit" /></p>
+            </form>
 
-        <?php
-    if (isset($_POST['school'])) {
+            <?php
       if (isset($_POST['school'])) {
-        if (
-          strlen($_POST['school']) >
-          3
-        ) {
-          echo '<div class="results notification"><span class="material-icons">
+        if (isset($_POST['school'])) {
+          if (
+            strlen($_POST['school']) >
+            3
+          ) {
+            echo '<div class="results notification"><span class="material-icons">
 info
 </span>Σχολείο: ' . $_POST['school'] . "<br />";
-          if (isset($_POST['email'])) echo "Email: " . $_POST['email'] . "</div>";
-        } else echo '
+            if (isset($_POST['email'])) echo "Email: " . $_POST['email'] . "</div>";
+          } else echo '
     <p class="error" tabindex="0"> <span class="material-icons"> error </span><strong>Error:</strong>Το όνομα του Σχολείου πρέπει να είναι μεγαλύτερο από 3 χαρακτήρες!<br /></p>
     ';
-      }
-    } ?>
-        <p>Source Code:</p>
-        <pre class="prettyprint linenums">
+        }
+      } ?>
+            <p>Source Code:</p>
+            <pre class="prettyprint linenums">
 &lt;html>
  &lt;body> 
       &lt;form method="POST">
@@ -66,8 +69,10 @@ if (isset($_POST['school'])) {if (isset($_POST['school'])) {
   &lt;/body>
 &lt;/html>
 </pre>
-    </main>
-
+        </main>
+    </section>
+    <?php
+  include("footer.php"); ?>
 </body>
 
 </html>

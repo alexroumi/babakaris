@@ -1,6 +1,7 @@
 <html>
 <?php
 $page_title = "Σχεδιασμός και Ανάπτυξη Διαδικτυακών Εφαρμογών - 2021-2022 - ΓΠΛ1";
+include("utils.php");
 include("header.php");
 ?>
 
@@ -22,7 +23,7 @@ include("header.php");
                 Σχολείου πρέπει να είναι μεγαλύτερο από 3 χαρακτήρες!<br /></div> -->
         </div>
         <!-- notification area end -->
-        <div class="update_date">Τελευταια ανανέωση: <strong>03/02/2022</strong></div>
+        <div class="update_date">Τελευταια ανανέωση: <strong><?php echo $last_update; ?></strong></div>
         <div class="container">
             <aside>
                 <ul>
