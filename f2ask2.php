@@ -28,8 +28,8 @@
 if (isset($_POST['surname'])) {echo '<div class="results"><span class="material-icons">
 info
 </span>Επώνυμο: ' . $_POST['surname'] . "<br />";
-     echo "Όνομα: " . $_POST['name'] . "<br />Μισθός (με κρατήσεις): " . strval($_POST['salary']-$_POST['salary']*0.1) . "</results>";}  ?>
-     Source Code:
+     echo "Όνομα: " . $_POST['name'] . "<br />Μισθός (με κρατήσεις): " . strval($_POST['salary']-$_POST['salary']*0.1) . "</div>";}  ?>
+     <p>Source Code:</p>
     <pre class="prettyprint linenums">
 &lt;html>
  &lt;body> 

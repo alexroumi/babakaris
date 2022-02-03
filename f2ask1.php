@@ -24,7 +24,7 @@ if (isset($_POST['num1'])) echo '<div class="results"><span class="material-icon
 info
 </span>Αριθμός 1: ' . $_POST['num1'] . "<br />"; if
     (isset($_POST['num2'])) echo "Αριθμός 2: " . $_POST['num2'] . "<br />Σύνολο: " . strval($_POST['num1'] + $_POST['num2']) . "</div>";  ?>
-    Source Code:
+    <p>Source Code:</p>
     <pre class="prettyprint linenums">
 &lt;html>
  &lt;body> 

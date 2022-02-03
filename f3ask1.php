@@ -24,11 +24,13 @@
 <?php
 if (isset($_POST['school'])) {if (isset($_POST['school'])) {
     if (strlen($_POST['school']) >
-    3) { echo '<div class="results">Σχολείο: ' . $_POST['school'] . "<br />"; if
+    3) { echo '<div class="results"><span class="material-icons">
+info
+</span>Σχολείο: ' . $_POST['school'] . "<br />"; if
     (isset($_POST['email'])) echo "Email: " . $_POST['email'] . "</div>"; } else echo '
     <p class="error" tabindex="0"> <span class="material-icons"> error </span><strong>Error:</strong>Το όνομα του Σχολείου πρέπει να είναι μεγαλύτερο από 3 χαρακτήρες!<br /></p>
     '; }} ?>
-    Source Code:
+    <p>Source Code:</p>
     <pre class="prettyprint linenums">
 &lt;html>
  &lt;body> 
