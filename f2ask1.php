@@ -1,31 +1,32 @@
 <html>
-  <?php $page_title = "Φυλλάδιο 2 - Άσκηση 1"; include("./header.php");?>
-  <body>
+<?php $page_title = "Φυλλάδιο 2 - Άσκηση 1";
+include("./header.php"); ?>
+
+<body>
     <header>
-      <div class="header">
-        <p><?php echo $page_title; ?></p>
-      </div>
+        <div class="header">
+            <p><?php echo $page_title; ?></p>
+        </div>
     </header>
     <main>
-      <form method="POST">
-        <p class="input_group">
-          <label for="num1">Αριθμός 1:</label>
-          <input type="number" name="num1" required />
-        </p>
-        <br>
-          <p class="input_group">
-          <label for="num2">Αριθμός 2: </label
-          ><input type="number" name="num2" required />
-        </p>
-        <p><input type="submit" value="Submit" /></p>
-      </form>
-      <?php
-if (isset($_POST['num1'])) echo '<div class="results"><span class="material-icons">
+        <form method="POST">
+            <p class="input_group">
+                <label for="num1">Αριθμός 1:</label>
+                <input type="number" name="num1" required />
+            </p>
+            <br>
+            <p class="input_group">
+                <label for="num2">Αριθμός 2: </label><input type="number" name="num2" required />
+            </p>
+            <p><input type="submit" value="Submit" /></p>
+        </form>
+        <?php
+    if (isset($_POST['num1'])) echo '<div class="results notification"><span class="material-icons">
 info
-</span>Αριθμός 1: ' . $_POST['num1'] . "<br />"; if
-    (isset($_POST['num2'])) echo "Αριθμός 2: " . $_POST['num2'] . "<br />Σύνολο: " . strval($_POST['num1'] + $_POST['num2']) . "</div>";  ?>
-    <p>Source Code:</p>
-    <pre class="prettyprint linenums">
+</span>Αριθμός 1: ' . $_POST['num1'] . "<br />";
+    if (isset($_POST['num2'])) echo "Αριθμός 2: " . $_POST['num2'] . "<br />Σύνολο: " . strval($_POST['num1'] + $_POST['num2']) . "</div>";  ?>
+        <p>Source Code:</p>
+        <pre class="prettyprint linenums">
 &lt;html>
  &lt;body> 
       &lt;form method="POST">
@@ -50,6 +51,7 @@ if (isset($_POST['num2']))
 &lt;/html>
 </pre>
     </main>
-    
-  </body>
+
+</body>
+
 </html>
