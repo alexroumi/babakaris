@@ -41,6 +41,10 @@ section {
   margin-top: 10px;
 }
 
+.update_date {
+  margin-left: 7px;
+}
+
 .container {
   margin: 0 10px 0 10px;
   display: flex;

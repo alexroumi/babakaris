@@ -22,13 +22,14 @@ include("header.php");
                 Σχολείου πρέπει να είναι μεγαλύτερο από 3 χαρακτήρες!<br /></div> -->
         </div>
         <!-- notification area end -->
+        <div class="update_date">Τελευταια ανανέωση: <strong>03/02/2022</strong></div>
         <div class="container">
             <aside>
                 <ul>
                     <li>Φυλλάδιο 2:</li>
                     <ul>
                         <li><a href="f2ask1.php" target="_blank">Άσκηση 1</a></li>
-                        <li><a href="f2ask2.php" target="_blank">Άσκηση 3</a></li>
+                        <li><a href="f2ask2.php" target="_blank">Άσκηση 2</a></li>
                     </ul>
                     <li>Φυλλάδιο 3:</li>
                     <ul>
@@ -46,7 +47,7 @@ include("header.php");
     </section>
     <footer>
         Δημιουργήθηκε και συντηρείται από τον&nbsp;<a href="https://instagram.com/alex.roumi" rel=”noreferrer”
-            target="_blank">Αλέξανδρο Ρουμελιώτη</a>.
+            target="_blank">Αλέξανδρο Ρουμελιώτη</a>
     </footer>
 </body>
 
