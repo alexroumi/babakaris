@@ -22,13 +22,10 @@
         console.log(ip);
     };
 
+    get_ip();
+
     function register_active_user() {
-        xmlhttp = null;
-        if (window.XMLHttpRequest) {
-            xmlhttp = new XMLHttpRequest();
-        } else if (window.ActiveXObject) {
-            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-        }
+        xmlhttp = new XMLHttpRequest();
 
         if (xmlhttp != null) {
             xmlhttp.open("POST", "db.php", true);
@@ -39,12 +36,7 @@
     }
 
     function fnUnloadHandler() {
-        xmlhttp = null;
-        if (window.XMLHttpRequest) { // code for Firefox, Opera, IE7, etc. 
-            xmlhttp = new XMLHttpRequest();
-        } else if (window.ActiveXObject) { // code for IE6, IE5 
-            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-        }
+        xmlhttp = new XMLHttpRequest();
 
         if (xmlhttp != null) {
             xmlhttp.open("POST", "./db.php", true);
