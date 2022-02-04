@@ -19,7 +19,6 @@
         $.getJSON("https://api.ipify.org?format=json", function(data) {
             ip = data.ip;
         })
-        return ip;
     };
 
     get_ip();
@@ -29,7 +28,7 @@
 
         if (xmlhttp != null) {
             xmlhttp.open("POST", "./db.php", true);
-            xmlhttp.send("ip=" + get_ip() + '&type=register');
+            xmlhttp.send("ip=" + ip + '&type=register');
             return true;
         }
 
@@ -40,7 +39,7 @@
 
         if (xmlhttp != null) {
             xmlhttp.open("POST", "./db.php", true);
-            xmlhttp.send('ip=' + get_ip() + '&type=unload');
+            xmlhttp.send('ip=' + ip + '&type=unload');
         }
     }
     </script>
