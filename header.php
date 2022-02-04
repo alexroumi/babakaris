@@ -8,4 +8,22 @@
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <link href="code.css" rel="stylesheet" />
+
+    <script language="javascript">
+    function fnUnloadHandler() {
+        xmlhttp = null;
+        if (window.XMLHttpRequest) { // code for Firefox, Opera, IE7, etc. 
+            xmlhttp = new XMLHttpRequest();
+        } else if (window.ActiveXObject) { // code for IE6, IE5 
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", "./db.php", true);
+            xmlhttp.send('ip=' + escape(document.referrer) + '&type=unload');
+        } else {
+            alert("Your browser does not support XMLHTTP.");
+        }
+    }
+    </script>
 </head>

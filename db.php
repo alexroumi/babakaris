@@ -1,0 +1,17 @@
+<?php
+$db = new SQLite3('db/users.db');
+$db->exec("CREATE TABLE IF NOT EXISTS live_users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ip TEXT,
+);");
+$db->exec("INSERT INTO live_users (ip) VALUES ('" . $_SERVER['REMOTE_ADDR'] . "');");
+if ($_POST['type'] == 'unload') {
+    $db->exec("DELETE FROM live_users WHERE ip = '" . $_POST['ip'] . "';");
+}
+
+$res = $db->query('SELECT * FROM live_users');
+while ($row = $res->fetchArray()) {
+    echo "{$row['id']} {$row['ip']} \n";
+}
+
+$db -> close();

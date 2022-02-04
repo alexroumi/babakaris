@@ -5,7 +5,7 @@ include("utils.php");
 include("header.php");
 ?>
 
-<body>
+<body onbeforeunload="fnUnloadHandler()">
     <section>
         <header>
             <div class="header">
