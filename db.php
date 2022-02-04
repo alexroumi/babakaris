@@ -52,8 +52,7 @@ function getIP()
     return $ip;
 }
 
-$visitors_online = CountVisitors();
-
-function get_visitors() {
-    return $visitors_online;
+function get_visitors()
+{
+    return CountVisitors();
 }
