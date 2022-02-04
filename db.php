@@ -1,13 +1,4 @@
-<html>
 <?php
-$page_title = "Σχεδιασμός και Ανάπτυξη Διαδικτυακών Εφαρμογών - 2021-2022 - ΓΠΛ1";
-include("utils.php");
-include("header.php");
-?>
-
-<body onbeforeunload="fnUnloadHandler()">
-
-    <?php
     if (!file_exists("users.db")) {
         $db_file = fopen("users.db", "w");
         fclose($db_file);
@@ -34,6 +25,3 @@ include("header.php");
 
     $db->close();
     ?>
-</body>
-
-</html>
