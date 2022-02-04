@@ -13,17 +13,22 @@ include("header.php");
             </div>
         </header>
         <!-- notification area start -->
-        <div class="notifcation-area">
-            <!-- <div class="results notifcation"><span class="material-icons">
+        <div class="notification-area">
+            <?php
+            // create_notification("info", "Αυτή η σελίδα είναι υπό κατασκευή και δεν είναι διαθέσιμη ακόμα.");
+            // create_notification("error", "Αυτή η σελίδα είναι υπό κατασκευή και δεν είναι διαθέσιμη ακόμα.");
+            // create_notification("warn", "Αυτή η σελίδα είναι υπό κατασκευή και δεν είναι διαθέσιμη ακόμα.");
+            ?>
+            <!-- <div class="results notification"><span class="material-icons">
                     info
                 </span>ahsdjlahdjakshkjh</div>
-            <div class="error notifcation"> <span class="material-icons"> error
+            <div class="error notification"> <span class="material-icons"> error
                 </span><strong>Error:</strong>Το όνομα
                 του
                 Σχολείου πρέπει να είναι μεγαλύτερο από 3 χαρακτήρες!<br /></div> -->
         </div>
         <!-- notification area end -->
-        <div class="update_date">Τελευταια ανανέωση: <strong><?php echo $last_update; ?></strong></div>
+
         <div class="container">
             <aside>
                 <ul>
@@ -42,14 +47,11 @@ include("header.php");
                 Εδώ θα βρείτε όλες τις ασκήσεις από τα Φυλλάδια που έχουμε κάνει στο μάθημα "Σχεδιασμός και Ανάπτυξη
                 Διαδικτυακών Εφαρμογών" όπου διδάσκεται η γλώσσα <strong>PHP</strong> με τους καθηγητές
                 <strong>Βαμβακάρη
-                    Μιχαήλ</strong> και <strong>? Καρακίτσου</strong>
+                    Μιχαήλ</strong> και <strong>Λήδα Καρακίτσου</strong>
             </main>
         </div>
     </section>
-    <footer>
-        Δημιουργήθηκε και συντηρείται από τον&nbsp;<a href="https://instagram.com/alex.roumi" rel=”noreferrer”
-            target="_blank">Αλέξανδρο Ρουμελιώτη</a>
-    </footer>
+    <?php include("footer.php"); ?>
 </body>
 
 </html>

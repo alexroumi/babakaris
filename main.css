@@ -33,11 +33,11 @@ section {
   margin-bottom: -50px;
 }
 
-.notifcation-area {
+.notification-area {
   margin: 10px 10px 0 10px;
 }
 
-.notifcation:not(:first-child) {
+.notification:not(:first-child) {
   margin-top: 10px;
 }
 
@@ -115,30 +115,11 @@ input:focus {
   outline-offset: 3px;
 }
 
-.error {
-  background-color: var(--main-red);
-  color: white;
-  padding: 20px 10px;
-  border-radius: 7px;
-  align-items: center;
-  display: flex;
+.notification-area:not(:empty) {
+  margin-bottom: 10px;
 }
 
-.error > .material-icons {
-  margin-right: 7px;
-}
-
-.error > strong {
-  margin-right: 7px;
-}
-
-.error:focus {
-  outline: 2px solid rgba(63, 81, 181, 0.418);
-  outline-offset: 3px;
-}
-
-.results {
-  background-color: var(--main-blue);
+.notification {
   line-height: 23px;
   color: white;
   padding: 20px 10px;
@@ -147,17 +128,29 @@ input:focus {
   display: flex;
 }
 
-.results > .material-icons {
-  margin-right: 7px;
-}
-
-.results > strong {
-  margin-right: 7px;
-}
-
-.results:focus {
+.notification:focus {
   outline: 2px solid rgba(63, 81, 181, 0.418);
   outline-offset: 3px;
+}
+
+.notification > .material-icons {
+  margin-right: 7px;
+}
+
+.notification > strong {
+  margin-right: 7px;
+}
+
+.error {
+  background-color: var(--main-red);
+}
+
+.results {
+  background-color: var(--main-blue);
+}
+
+.warn {
+  background-color: rgb(245, 124, 0);
 }
 
 input[type="submit"] {
@@ -183,7 +176,7 @@ footer {
   align-items: center;
 }
 
-footer > a {
+footer > p > a {
   color: white;
   font-weight: bold;
   text-decoration: none;

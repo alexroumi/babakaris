@@ -1,6 +1,8 @@
 <html>
 <?php $page_title = "Φυλλάδιο 2 - Άσκηση 1";
-include("./header.php"); ?>
+include("utils.php");
+include("./header.php");
+?>
 
 <body>
     <section>
@@ -9,6 +11,11 @@ include("./header.php"); ?>
                 <p><?php echo $page_title; ?></p>
             </div>
         </header>
+        <div class="notification-area">
+            <?php if (is_mobile()) {
+                create_notification('warn', "Για καλύτερη εμπειρία χρησιμοποιήστε υπολογιστή");
+            } ?>
+        </div>
         <main>
             <form method="POST">
                 <p class="input_group">
@@ -22,10 +29,8 @@ include("./header.php"); ?>
                 <p><input type="submit" value="Submit" /></p>
             </form>
             <?php
-      if (isset($_POST['num1'])) echo '<div class="results notification"><span class="material-icons">
-info
-</span>Αριθμός 1: ' . $_POST['num1'] . "<br />";
-      if (isset($_POST['num2'])) echo "Αριθμός 2: " . $_POST['num2'] . "<br />Σύνολο: " . strval($_POST['num1'] + $_POST['num2']) . "</div>";  ?>
+            if (isset($_POST['num1'])) create_notification("info", 'Αριθμός 1: ' . make_it_safe('num1') . "<br />Αριθμός 2: " . make_it_safe('num2') . "<br />Σύνολο: " . strval(make_it_safe('num1') + make_it_safe('num2')) . "</div>");
+            ?>
             <p>Source Code:</p>
             <pre class="prettyprint linenums">
 &lt;html>

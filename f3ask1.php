@@ -1,6 +1,7 @@
 <html>
 <?php
 $page_title = "Φυλλάδιο 3 - Άσκηση 1";
+include("utils.php");
 include("header.php");
 ?>
 
@@ -11,6 +12,11 @@ include("header.php");
                 <p><?php echo $page_title; ?></p>
             </div>
         </header>
+        <div class="notification-area">
+            <?php if (is_mobile()) {
+        create_notification('warn', "Για καλύτερη εμπειρία χρησιμοποιήστε υπολογιστή");
+      } ?>
+        </div>
         <main>
             <form method="POST">
                 <p class="input_group">
@@ -31,13 +37,8 @@ include("header.php");
             strlen($_POST['school']) >
             3
           ) {
-            echo '<div class="results notification"><span class="material-icons">
-info
-</span>Σχολείο: ' . $_POST['school'] . "<br />";
-            if (isset($_POST['email'])) echo "Email: " . $_POST['email'] . "</div>";
-          } else echo '
-    <p class="error" tabindex="0"> <span class="material-icons"> error </span><strong>Error:</strong>Το όνομα του Σχολείου πρέπει να είναι μεγαλύτερο από 3 χαρακτήρες!<br /></p>
-    ';
+            create_notification("info", 'Σχολείο: ' . make_it_safe('school') . "<br />Email: " . make_it_safe('email') . "</div>");
+          } else create_notification("error", "<strong>Error:</strong>Το όνομα του Σχολείου πρέπει να είναι μεγαλύτερο από 3 χαρακτήρες!");
         }
       } ?>
             <p>Source Code:</p>
