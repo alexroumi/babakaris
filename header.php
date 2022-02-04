@@ -13,12 +13,13 @@
     </script>
 
     <script language="javascript">
+    var ip;
+
     function get_ip() {
         $.getJSON("https://api.ipify.org?format=json", function(data) {
-            return data.ip;
+            ip = data.ip;
         })
     };
-    var ip = get_ip();
 
     function register_active_user() {
         xmlhttp = null;
@@ -31,6 +32,7 @@
         if (xmlhttp != null) {
             xmlhttp.open("POST", "db.php", true);
             xmlhttp.send("ip=" + get_ip() + '&type=register');
+            return true;
         }
 
     }
