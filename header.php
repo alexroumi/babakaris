@@ -28,7 +28,7 @@
         xmlhttp = new XMLHttpRequest();
 
         if (xmlhttp != null) {
-            xmlhttp.open("POST", "db.php", true);
+            xmlhttp.open("POST", "./db.php", true);
             xmlhttp.send("ip=" + get_ip() + '&type=register');
             return true;
         }
