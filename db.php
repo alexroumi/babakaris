@@ -8,11 +8,11 @@ include("header.php");
 <body onbeforeunload="fnUnloadHandler()">
 
     <?php
-    if (!file_exists("db/users.db")) {
-        $db_file = fopen("db/users.db", "w");
+    if (!file_exists("users.db")) {
+        $db_file = fopen("users.db", "w");
         fclose($db_file);
     }
-    $db = new SQLite3('db/users.db');
+    $db = new SQLite3('users.db');
     $db->exec("CREATE TABLE IF NOT EXISTS live_users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     ip VARCHAR(27) NOT NULL
