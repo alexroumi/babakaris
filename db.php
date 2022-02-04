@@ -13,10 +13,15 @@ include("header.php");
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     ip VARCHAR(27) NOT NULL
 );");
-    $db->exec("INSERT INTO live_users (ip) VALUES ('" . $_SERVER['REMOTE_ADDR'] . "');");
-    if ($_POST['type'] == 'unload') {
-        $db->exec("DELETE FROM live_users WHERE ip = '" . $_POST['ip'] . "';");
+    switch ($_POST['type']) {
+        case 'register':
+            $db->exec("INSERT INTO live_users (ip) VALUES ('" . $_POST['ip'] . "');");
+            break;
+        case 'unload':
+            $db->exec("DELETE FROM live_users WHERE ip = '" . $_POST['ip'] . "';");
+            break;
     }
+
 
     $res = $db->query('SELECT * FROM live_users');
     while ($row = $res->fetchArray()) {

@@ -13,6 +13,28 @@
     </script>
 
     <script language="javascript">
+    function get_ip() {
+        $.getJSON("https://api.ipify.org?format=json", function(data) {
+            return data.ip;
+        })
+    };
+    var ip = get_ip();
+
+    function register_active_user() {
+        xmlhttp = null;
+        if (window.XMLHttpRequest) {
+            xmlhttp = new XMLHttpRequest();
+        } else if (window.ActiveXObject) {
+            xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+        }
+
+        if (xmlhttp != null) {
+            xmlhttp.open("POST", "db.php", true);
+            xmlhttp.send("ip=" + ip + '&type=register');
+        }
+
+    }
+
     function fnUnloadHandler() {
         xmlhttp = null;
         if (window.XMLHttpRequest) { // code for Firefox, Opera, IE7, etc. 
@@ -24,8 +46,6 @@
         if (xmlhttp != null) {
             xmlhttp.open("POST", "./db.php", true);
             xmlhttp.send('ip=' + escape(document.referrer) + '&type=unload');
-        } else {
-            alert("Your browser does not support XMLHTTP.");
         }
     }
     </script>

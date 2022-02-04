@@ -5,7 +5,7 @@ include("utils.php");
 include("header.php");
 ?>
 
-<body onbeforeunload="fnUnloadHandler()">
+<body onload="register_active_user()" onbeforeunload="fnUnloadHandler()">
     <section>
         <header>
             <div class="header">
