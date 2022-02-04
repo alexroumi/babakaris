@@ -19,6 +19,7 @@
         $.getJSON("https://api.ipify.org?format=json", function(data) {
             ip = data.ip;
         })
+        console.log(ip);
     };
 
     function register_active_user() {
