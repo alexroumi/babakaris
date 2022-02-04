@@ -9,9 +9,10 @@
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <link href="code.css" rel="stylesheet" />
 
-    <script language="javascript">
-    console.log(escape(document.referrer));
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
 
+    <script language="javascript">
     function fnUnloadHandler() {
         xmlhttp = null;
         if (window.XMLHttpRequest) { // code for Firefox, Opera, IE7, etc. 
