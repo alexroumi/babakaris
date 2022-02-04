@@ -53,5 +53,7 @@ function getIP()
 }
 
 $visitors_online = CountVisitors();
-?>
-<p>Visitors online: <b><?= $visitors_online; ?></b></p>
+
+function get_visitors() {
+    return $visitors_online;
+}

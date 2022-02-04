@@ -8,39 +8,4 @@
 
     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
     <link href="code.css" rel="stylesheet" />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-    </script>
-
-    <script language="javascript">
-    var ip;
-
-    function get_ip() {
-        $.getJSON("https://api.ipify.org?format=json", function(data) {
-            ip = data.ip;
-        })
-    };
-
-    get_ip();
-
-    function register_active_user() {
-        xmlhttp = new XMLHttpRequest();
-
-        if (xmlhttp != null) {
-            xmlhttp.open("POST", "./db.php", true);
-            xmlhttp.send("ip=" + ip + '&type=register');
-            return true;
-        }
-
-    }
-
-    function fnUnloadHandler() {
-        xmlhttp = new XMLHttpRequest();
-
-        if (xmlhttp != null) {
-            xmlhttp.open("POST", "./db.php", true);
-            xmlhttp.send('ip=' + ip + '&type=unload');
-        }
-    }
-    </script>
 </head>

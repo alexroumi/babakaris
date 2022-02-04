@@ -1,4 +1,6 @@
 <?php
+include('db.php');
+$users = get_visitors();
 $last_update = "03/02/2022";
 
 function create_notification($type, $message)
