@@ -30,7 +30,7 @@
 
         if (xmlhttp != null) {
             xmlhttp.open("POST", "db.php", true);
-            xmlhttp.send("ip=" + ip + '&type=register');
+            xmlhttp.send("ip=" + get_ip() + '&type=register');
         }
 
     }
@@ -45,7 +45,7 @@
 
         if (xmlhttp != null) {
             xmlhttp.open("POST", "./db.php", true);
-            xmlhttp.send('ip=' + escape(document.referrer) + '&type=unload');
+            xmlhttp.send('ip=' + get_ip() + '&type=unload');
         }
     }
     </script>
