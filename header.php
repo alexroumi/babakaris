@@ -19,7 +19,7 @@
         $.getJSON("https://api.ipify.org?format=json", function(data) {
             ip = data.ip;
         })
-        console.log(ip);
+        return ip;
     };
 
     get_ip();
