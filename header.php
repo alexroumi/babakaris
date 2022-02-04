@@ -10,6 +10,8 @@
     <link href="code.css" rel="stylesheet" />
 
     <script language="javascript">
+    console.log(escape(document.referrer));
+
     function fnUnloadHandler() {
         xmlhttp = null;
         if (window.XMLHttpRequest) { // code for Firefox, Opera, IE7, etc. 
