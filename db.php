@@ -40,7 +40,7 @@ function CountVisitors()
     fputs($fp, serialize($dbary_new));
     fclose($fp);
 
-    $out = sprintf("%03d", count($dbary_new)); // format the result to display 3 digits with leading 0's
+    $out = count($dbary_new); // format the result to display 3 digits with leading 0's
     return $out;
 }
 
